@@ -21,7 +21,7 @@
   margin: 0;
   padding: 0;
 }
-.box {
+.bosx {
   /* margin-top: 7%; */
   position: absolute;
   display: inline-block;
@@ -53,8 +53,7 @@
   height: 50px;
   background-color: red;
 }
-.box2 {
-  width: 30px;
+.box {
   height: 50px;
-  background-color: green;
+  border: 2px solid red;
 }
