@@ -34,7 +34,7 @@
             <li>List Item</li>
             <li>List Item</li>
         </ul>
-
+        <div id="myDIV"></div>
         <input type="button" id="bu" value="Button 1">
         <input type="submit" value="Submit">
         <input type="text">
@@ -49,6 +49,16 @@
         $('p span').css('font-size', '2em');
         $('ul#list li:odd').css('list-style', 'circle');
         $('[href]').hide();
+        $(document).ready(function () {
+            var testArray = ["test1", "test2", "test3", "test4"];
+            var vPool = "";
+            jQuery.each(testArray, function (i, val) {
+                vPool += val + "<br /> is the best <br />";
+            });
+
+            //We add vPool HTML content to #myDIV
+            $('#myDIV').html(vPool);
+        });
     </script>
 </body>
 
