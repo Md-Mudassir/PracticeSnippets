@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <iframe src="https://open.spotify.com/embed/track/5O932cZmzOZGOGZz9RHx20" width="400" height="400" frameborder="0"
+        allowtransparency="true" allow="encrypted-media"></iframe>
     <header>
         <h1>jQuery Crash Course | Events</h1>
     </header>
@@ -40,7 +42,7 @@
         </form>
     </div>
     <script>
-        $('#btn1').hover(function () {
+        $(':iframe').on('click', function () {
             alert("hello");
         })
         $('*').load(function () {
