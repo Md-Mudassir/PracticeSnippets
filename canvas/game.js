@@ -3,7 +3,6 @@ class Player {
     this.name = name;
     this.type = type;
     this.size = size;
-    this.speed = 0;
     this.arrows = type == "Police" ? [65, 68, 87, 83] : [37, 39, 38, 40];
     this.color = type == "Police" ? "red" : "black";
     this.x = x;
@@ -59,15 +58,59 @@ class Game {
   keyPress(e) {
     console.log(e.keyCode);
     let keys = e.keyCode;
+
+    // this.players.filter(pressed => {
+    //   if (pressed.type == "Police" && pressed.arrows == 40) {
+    //     console.log("press");
+    //   }
+    // });
+
+    this.players.filter(x => x.player == "Police", console.log("hjdf"));
+
+    // let red = this.players[0];
+    // let black = this.players[1];
     // What is the key ,
     // I will adjust the x, y value of thief and police
     // [-x,+x,-y,+y]
-    if (keys == 40) {
-      console.log("pressed");
-      this.x -= 3;
+    // if (keys == 40) {
+    //   console.log(this.players[0].name, this.players[1].name);
+    //   this.players.filter(x => );
+    // }
+    // this.players[0].y = this.players[0].x = -1;
+    // switch (keys) {
+    //   case 40:
+    //     red.y += 3;
+    //     break;
+    //   case 38:
+    //     red.y -= 3;
+    //     break;
+    //   case 39:
+    //     red.x += 3;
+    //     break;
+    //   case 37:
+    //     red.x -= 3;
+    //     break;
+    //   case 83:
+    //     black.y += 3;
+    //     break;
+    //   case 87:
+    //     black.y -= 3;
+    //     break;
+    //   case 68:
+    //     black.x += 3;
+    //     break;
+    //   case 65:
+    //     black.x -= 3;
+    //     break;
+    // }
 
-      // this.players.filter(x => x == "Police").map(v => console.log(v.speed));
-    }
+    // this.players.filter(police);
+
+    // function police(x )
+
+    // this.players
+    //   .filter(x => x == "Police")
+    //   .map(v => console.log(this.players[0].y));
   }
 }
 
