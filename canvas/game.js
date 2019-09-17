@@ -65,7 +65,9 @@ class Game {
     //   }
     // });
 
-    this.players.filter(x => x.player == "Police", console.log("hjdf"));
+    this.players.filter(x => {
+      return console.log("yay");
+    });
 
     // let red = this.players[0];
     // let black = this.players[1];
