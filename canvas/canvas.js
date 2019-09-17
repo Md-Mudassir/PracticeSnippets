@@ -50,11 +50,11 @@ function Circle(x, y, dx, dy, radius) {
   this.dx = dx;
   this.dy = dy;
   this.radius = radius;
-
+  this.color = colors[Math.floor(Math.random() * colors.length)];
   this.draw = function() {
     c.beginPath();
     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    c.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+    c.fillStyle = this.color;
     c.fill();
   };
 
