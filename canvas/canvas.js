@@ -32,12 +32,6 @@ let c = canvas.getContext("2d");
 //   c.stroke();
 // }
 
-let x = Math.random() * innerWidth;
-let dx = 4;
-let radius = 30;
-let y = Math.random() * innerHeight;
-let dy = 4;
-
 function Circle(x, y, dx, dy, radius) {
   this.x = x;
   this.y = y;
@@ -65,15 +59,25 @@ function Circle(x, y, dx, dy, radius) {
   };
 }
 
-let circle = new Circle(200, 200, 3, 3, 30);
+let circleArr = [];
+for (let i = 0; i < 50; i++) {
+  let x = Math.random() * innerWidth;
+  let dx = (Math.random() - 0.5) * 8;
+  let radius = 30;
+  let y = Math.random() * innerHeight;
+  let dy = (Math.random() - 0.5) * 8;
+
+  circleArr.push(new Circle(x, y, dx, dy, radius));
+}
+console.log(circleArr);
 
 function animate() {
   requestAnimationFrame(animate);
   c.clearRect(0, 0, innerWidth, innerHeight);
-  circle.update();
-  c.beginPath();
-  c.arc(x, y, radius, 0, Math.PI * 2, false);
-  c.strokeStyle = "blue";
-  c.stroke();
+  //   circle.update();
+
+  for (let i = 0; i < circleArr.length; i++) {
+    circleArr[i].update();
+  }
 }
 animate();
