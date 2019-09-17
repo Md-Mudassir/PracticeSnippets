@@ -44,6 +44,7 @@ function Circle(x, y, dx, dy, radius) {
     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     c.strokeStyle = "blue";
     c.stroke();
+    c.fill();
   };
 
   this.update = function() {
@@ -62,10 +63,10 @@ function Circle(x, y, dx, dy, radius) {
 let circleArr = [];
 for (let i = 0; i < 50; i++) {
   let x = Math.random() * innerWidth;
-  let dx = (Math.random() - 0.5) * 8;
+  let dx = Math.random() - 0.5;
   let radius = 30;
   let y = Math.random() * innerHeight;
-  let dy = (Math.random() - 0.5) * 8;
+  let dy = Math.random() - 0.5;
 
   circleArr.push(new Circle(x, y, dx, dy, radius));
 }
