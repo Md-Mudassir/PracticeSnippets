@@ -31,6 +31,18 @@ let c = canvas.getContext("2d");
 //   c.strokeStyle = "blue";
 //   c.stroke();
 // }
+let mouse = {
+  x: undefined,
+  y: undefined
+};
+
+window.addEventListener("click", function(event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+  console.log(mouse);
+});
+
+let colors = ["red", "blue", "green", "purple"];
 
 function Circle(x, y, dx, dy, radius) {
   this.x = x;
@@ -42,8 +54,7 @@ function Circle(x, y, dx, dy, radius) {
   this.draw = function() {
     c.beginPath();
     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    c.strokeStyle = "blue";
-    c.stroke();
+    c.fillStyle = colors[Math.floor(Math.random() * colors.length)];
     c.fill();
   };
 
