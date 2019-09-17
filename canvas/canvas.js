@@ -42,7 +42,7 @@ window.addEventListener("click", function(event) {
   console.log(mouse);
 });
 
-let colors = ["red", "blue", "green", "purple"];
+let colors = ["#E85FCD", "#FF6997", "#9469FF", "#AC5FE8"];
 
 function Circle(x, y, dx, dy, radius) {
   this.x = x;
@@ -72,12 +72,12 @@ function Circle(x, y, dx, dy, radius) {
 }
 
 let circleArr = [];
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 100; i++) {
   let x = Math.random() * innerWidth;
-  let dx = Math.random() - 0.5;
-  let radius = 30;
+  let dx = (Math.random() - 0.5) * 8;
+  let radius = 14;
   let y = Math.random() * innerHeight;
-  let dy = Math.random() - 0.5;
+  let dy = (Math.random() - 0.5) * 8;
 
   circleArr.push(new Circle(x, y, dx, dy, radius));
 }
