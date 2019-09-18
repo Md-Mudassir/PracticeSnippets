@@ -9,12 +9,70 @@
         body {
             margin: 0;
         }
+
+        #canvas-wrap {
+            position: relative;
+
+        }
+
+        #canvas-wrap canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0
+        }
+
+        #overlay {
+            justify-content: center;
+        }
+
+        #overlay h1 {
+            justify-items: center;
+        }
+
+        img {
+            position: relative;
+            top: 20%;
+            left: 50%;
+        }
+
+        .btn {
+            position: relative;
+            font-size: 1.8rem;
+            padding: 5rem 0;
+            width: 50rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            text-decoration: none;
+            background: #ffffff;
+            left: 50%;
+            border: 2px solid #000000;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 26px;
+
+        }
+
+        /* #game {
+            position: absolute;
+            z-index: 20;
+        } */
     </style>
     <title>Canvas</title>
 </head>
 
+
 <body>
-    <canvas></canvas>
+
+
+    <div id="canvas-wrap">
+        <canvas></canvas>
+        <div id="overlay">
+            <img src="logo.JPG" alt="" srcset="">
+            <h1>hii</h1>
+            <a class="btn" href="./pages/category.html">Play</a>
+        </div>
+    </div>
     <script src="canvas.js"></script>
 </body>
 
