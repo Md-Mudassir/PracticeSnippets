@@ -16,9 +16,21 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // let fil = ages.filter(age => age >= 21);
 
-// let retails = companies.filter(x => x.category == "Retail");
+let retails = companies.filter(x => x.category == "Retail");
 
 // let eightys = companies.filter(eyt => eyt.start >= 1981 && eyt.start < 1990);
 
-let lasted = companies.filter(last => last.end - last.start > 10).length;
-console.log(lasted);
+// let lasted = companies.filter(last => last.end - last.start > 10).length;
+
+// let named = companies.map(names => (nam = names.name));
+
+// let aged = ages.map(aged => aged ** 2);
+
+// let sorted = retails.sort((c1, c2) => {
+//   if (c1.start > c2.start) return 1;
+// });
+
+// let sorted = ages.sort((a, b) => b - a);
+
+let totald = ages.reduce((a, b) => a + b, 0);
+console.log(totald);
