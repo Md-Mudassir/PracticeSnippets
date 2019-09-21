@@ -22,7 +22,7 @@ let retails = companies.filter(x => x.category == "Retail");
 
 // let lasted = companies.filter(last => last.end - last.start > 10).length;
 
-// let named = companies.map(names => (nam = names.name));
+let named = companies.map(names => (nam = names.name));
 
 // let aged = ages.map(aged => aged ** 2);
 
@@ -32,5 +32,5 @@ let retails = companies.filter(x => x.category == "Retail");
 
 // let sorted = ages.sort((a, b) => b - a);
 
-let totald = ages.reduce((a, b) => a + b, 0);
-console.log(totald);
+// let totald = ages.reduce((a, b) => a + b, 0);
+console.log(nam);

@@ -1,0 +1,23 @@
+<html>
+
+<body>
+
+    <p id="plus">000</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+            let count = 0;
+            setInterval(function () {
+                document.getElementById('plus').innerHTML = count;
+                count++;
+            }, 700);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
