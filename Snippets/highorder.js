@@ -33,4 +33,7 @@ let named = companies.map(names => (nam = names.name));
 // let sorted = ages.sort((a, b) => b - a);
 
 // let totald = ages.reduce((a, b) => a + b, 0);
-console.log(nam);
+
+let string = "hello, world";
+
+console.log(string.split(", "));
