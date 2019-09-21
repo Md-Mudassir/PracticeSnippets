@@ -34,6 +34,21 @@ let named = companies.map(names => (nam = names.name));
 
 // let totald = ages.reduce((a, b) => a + b, 0);
 
-let string = "hello, world";
+// let string = "hello ! world";
+// OBJECT LITERALS
+const person = {
+  firstName: "John",
+  age: 30,
+  hobbies: ["music", "movies", "sports"],
+  address: {
+    street: "50 Main st",
+    city: "Boston",
+    state: "MA"
+  }
+};
 
-console.log(string.split(", "));
+const { age, firstName } = person;
+person.birthday = "march";
+console.log(person);
+
+// console.log(string.split(" ! "));
