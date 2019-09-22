@@ -77,22 +77,17 @@ for (let to of todos) {
 }
 
 // console.log(string.split(" ! "));
-function Person(firstName, lastName, dob) {
-  // Set object properties
-  this.firstName = "oo";
-  this.lastName = lastName;
-  this.dob = new Date(dob); // Set to actual date object using Date constructor
-  this.getBirthYear = function() {
-    return this.dob.getFullYear();
-  };
-  // this.getFullName = function() {
-  //   return `${this.firstName} ${this.lastName}`
-  // }
+class Person {
+  constructor(firstName, lastName, dob) {
+    // Set object properties
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = dob;
+  }
+  getName() {
+    return this.firstName;
+  }
 }
 
-Person.prototype.getName = function() {
-  return this.firstName;
-};
-
-let persona = new Person("muddu", 2 - 2 - 1222);
+let persona = new Person("md", "muddu", 2 - 2 - 1222);
 console.log(persona.getName());
