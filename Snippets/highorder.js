@@ -49,6 +49,31 @@ const person = {
 
 const { age, firstName } = person;
 person.birthday = "march";
-console.log(person);
+// console.log(person);
+
+// Array of objects
+const todos = [
+  {
+    id: 1,
+    text: "Take out trash",
+    isComplete: false
+  },
+  {
+    id: 2,
+    text: "Dinner with wife",
+    isComplete: false
+  },
+  {
+    id: 3,
+    text: "Meeting with boss",
+    isComplete: true
+  }
+];
+
+let jtodo = JSON.stringify(todos);
+
+for (let to of todos) {
+  console.log(to.text);
+}
 
 // console.log(string.split(" ! "));

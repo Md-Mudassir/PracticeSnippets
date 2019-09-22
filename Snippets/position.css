@@ -1,0 +1,8 @@
+.continer {
+  position: relative;
+}
+
+#plus {
+  position: absolute;
+  top: 20%;
+}
