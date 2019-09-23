@@ -1,3 +1,25 @@
 mongo "mongodb://cluster0-shard-00-00-jxeqq.mongodb.net:27017,cluster0-shard-00-01-jxeqq.mongodb.net:27017,cluster0-shard-00-02-jxeqq.mongodb.net:27017/test?replicaSet=Cluster0-shard-0" --authenticationDatabase admin --ssl --username m001-student --password m001-mongodb-basics
 
 mongo "mongodb+srv://cluster0-pv37l.mongodb.net/test" --username m001-student --password m001-mongodb-basics
+
+Answers 1:
+1. db.restaurants.find({},{restaurant_id:1,name:1,borough:1,cuisine :1,_id:0})
+2. db.restaurants.find({"borough":"Bronx"}).skip(5).limit(5)
+3. db.restaurants.find({"address.coord":{$lt:-95.754168}})
+4. db.restaurants.find({"grades.score":{$gt:70},"address.coord":{$lt:-65.754168},"cuisine":{$ne:"American"}})
+5. db.restaurants.find({name:/^Wil/},{restaurant_id:1,name:1,borough:1,cuisine :1,_id:0})
+
+Part 2:
+4. {grades: {$elemMatch:{"score":{$gt:80,$lt:100}}}}
+6. db.restaurants.find({cuisine:{$ne:"American"},"grades.grade":{$eq:"A"},borough:"Brooklyn"}).sort({"restaurant_id":-1})
+7. db.restaurants.find({name:/Reg/},{restaurant_id:1,name:1,borough:1,cuisine :1,_id:0})
+8. db.restaurants.find({borough:"Bronx",$or:[{cuisine:"American"},{cuisine:"Chinese"}]})
+9. db.restaurants.find({borough:{$nin:["Staten Island","Queens","Bronx","Brooklyn"]}},{restaurant_id:1,name:1,borough:1,cuisine :1,_id:0})
+10. db.restaurants.find( {"grades.date": ISODate("2014-08-11T00:00:00Z"), "grades.grade":"A" , "grades.score" : 11}, {"restaurant_id" : 1,"name":1,"grades":1});
+11. db.restaurants.find({ "grades.1.date": ISODate("2014-08-11T00:00:00Z"), "grades.1.grade":"A" , "grades.1.score" : 9}, 
+{"restaurant_id" : 1,"name":1,"grades":1});
+12. db.restaurants.find().sort({"name":-1}),pretty()
+13. db.restaurants.find().sort({"cuisine":1,"borough":-1}).pretty()
+14. db.restaurants.find({"address.coord" : {$type : "double"}})
+15. db.restaurants.find({"grades.score":{$mod:[7,0]}}).pretty()
+
