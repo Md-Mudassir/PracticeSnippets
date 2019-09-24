@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Md-Mudassir/PracticeSnippets#readme",
   "dependencies": {
     "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
   }
 }
