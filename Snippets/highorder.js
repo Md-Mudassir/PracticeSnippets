@@ -1,6 +1,8 @@
 const companies = [
   { name: "Company One", category: "Finance", start: 1981, end: 2003 },
   { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
+  { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
+  { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
   { name: "Company Three", category: "Auto", start: 1999, end: 2007 },
   { name: "Company Four", category: "Retail", start: 1989, end: 2010 },
   { name: "Company Five", category: "Technology", start: 2009, end: 2014 },
@@ -10,6 +12,34 @@ const companies = [
   { name: "Company Nine", category: "Retail", start: 1981, end: 1989 }
 ];
 
+let fill = [...new Set(companies.map(x => x.name))];
+// console.log(fill);
+
+let com = companies.filter(x => {
+  return x.category.includes("Retail");
+});
+
+function CompareDate() {
+  //Note: 00 is month i.e. January
+  var todayDate = new Date(); //Today Date
+  var dateOne = new Date(3, Aug, 18);
+  if (todayDate > dateOne) {
+    console.log("Date One is greater than Date Two.");
+  } else {
+    console.log("Date Two is greater than Date One.");
+  }
+}
+// CompareDate();
+let timestamp1 = 1529743075.0163753;
+let timestamp2 = 1529743075.0163753;
+function time(timestamp1, timestamp2) {
+  var difference = timestamp1 - timestamp2;
+  var daysDifference = Math.floor(difference / 1000 / 60 / 60 / 24);
+
+  return daysDifference;
+}
+console.log(time(1529743075.0163753, 1558195876.6541212));
+// console.log(com);
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // companies.forEach(x => console.log(x.category));
@@ -73,7 +103,7 @@ const todos = [
 let jtodo = JSON.stringify(todos);
 
 for (let to of todos) {
-  console.log(to.text);
+  // console.log(to.text);
 }
 
 // console.log(string.split(" ! "));
@@ -90,4 +120,4 @@ class Person {
 }
 
 let persona = new Person("md", "muddu", 2 - 2 - 1222);
-console.log(persona.getName());
+// console.log(persona.getName());
