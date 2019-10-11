@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: grey;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 20px;
+  margin: 20px;
+  background-color: crimson;
+  font-size: 1.5rem;
+}
