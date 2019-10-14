@@ -1,7 +1,6 @@
 #include<stdio.h>
 
-void
-main ()
+void main ()
 {
   int mat[10][10], transpose[10][10], final[10][10], nextRotate[10][10];
   int i, j, row, col;
