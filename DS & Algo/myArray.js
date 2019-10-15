@@ -39,3 +39,8 @@ myArray.push('are');
 myArray.push('nice');
 myArray.shiftItems(0);
 console.log(myArray);
+
+
+let rev = str => [...str].reverse().join('');
+
+rev('hello')
