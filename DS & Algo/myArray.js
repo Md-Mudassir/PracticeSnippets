@@ -16,6 +16,10 @@ class MyArray {
         delete this.data[this.length - 1];
         this.length--;
         // return lastItem;
-        
+      }
+      deleteAtIndex(index) {
+        const item = this.data[index];
+        this.shiftItems(index);
+        return item;
       }
 }
