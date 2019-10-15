@@ -44,3 +44,16 @@ console.log(myArray);
 let rev = str => [...str].reverse().join('');
 
 rev('hello')
+
+//twoSum
+function twoSum(nums, target) {
+    for(let i=0; i<nums.length;i++){
+      for(let j=i+1;j<nums.length;j++){
+        if(nums[i] + nums[j]===target)
+            console.log(nums[i],nums[j]);
+    }
+    }
+      
+};
+
+twoSum([2,1,1,7],9)
