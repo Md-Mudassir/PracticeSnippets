@@ -1,18 +1,12 @@
 //Initial Solution
+const array = [1, 2, 3, 4, 5, 9, 8, 7, 6];
 
-let list = [1, 2, 3, 4],
-  list2 = [4, 2, 7, 0];
-let list3 = [...list, ...list2];
-let sorted = list3.sort((a, b) => a - b);
+let sorted = array.sort((a, b) => a - b);
 
-// console.log(sorted);
-
-//From Scratch Solution
+console.log("using sort() " + sorted);
 
 //Bubble sort
-const array = [1, 2, 6, 4, 8, 5, 6, 8, 9, 0];
-
-function sortEle(arr) {
+sortEle = arr => {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
       if (arr[j] > arr[j + 1]) {
@@ -22,8 +16,6 @@ function sortEle(arr) {
       }
     }
   }
-}
-
+};
 sortEle(array);
-
-console.log(array);
+console.log("using bubble sort " + array);
