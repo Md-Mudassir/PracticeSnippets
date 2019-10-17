@@ -20,19 +20,4 @@ Part 2:
 14. db.restaurants.find({"address.coord" : {$type : "double"}})
 15. db.restaurants.find({"grades.score":{$mod:[7,0]}}).pretty()
 
-        // .then(res => {
-        //   return res.json();
-        // })
-        // .then(loadedQuestions => {
-        //   const _question = loadedQuestions.map(i =>
-        //     i.results.map(res => res.question)
-        //   );
-        //   const _correct_answer = loadedQuestions.map(i =>
-        //     i.results.map(res => res.correct_answer)
-        //   );
-        //   console.log(_question, _correct_answer);
-        //   questions = loadedQuestions.map(loadedQuestion => {
-        //     const formattedQuestion = {
-        //       question: loadedQuestion.question
-        //     };
-
+    
