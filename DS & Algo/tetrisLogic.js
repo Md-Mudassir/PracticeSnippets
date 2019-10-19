@@ -1,6 +1,6 @@
 //repeated elements plus sum of it
 let blocks = [1, 1, 1, 1, 2, 2, 2, 5, 6, 6];
-let reducer = (accumulator, currentValue) => accumulator + currentValue;
+let reducer = (x, y) => x + y;
 let score = 0;
 let count = {};
 

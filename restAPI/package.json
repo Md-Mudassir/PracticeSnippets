@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "nod": "nodemon --ignore 'logs/*' index.js",
-    "start": "PORT=3112 node index.js",
+    "start": "node index.js",
     "show": "forever list",
     "stop": "forever stop index.js"
   },
