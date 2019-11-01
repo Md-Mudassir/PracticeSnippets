@@ -6,7 +6,6 @@ import { Search } from "./components/search-box/search.component";
 class App extends Component {
   constructor() {
     super();
-
     this.state = {
       monsters: [],
       searchfield: ""
@@ -18,6 +17,10 @@ class App extends Component {
       .then(response => response.json())
       .then(users => this.setState({ monsters: users }));
   }
+  handleChange = e => {
+    this.setState({ searchfield: e.target.value });
+  };
+  
   render() {
     const { monsters, searchfield } = this.state;
     const filterdMonsters = monsters.filter(monster =>
@@ -25,10 +28,7 @@ class App extends Component {
     );
     return (
       <div className="App">
-        <Search
-          placeholder="search monster"
-          handleChange={e => this.setState({ searchfield: e.target.value })}
-        />
+        <Search placeholder="search monster" handleChange={this.handleChange} />
         <CardList monsters={filterdMonsters}></CardList>
       </div>
     );
