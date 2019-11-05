@@ -126,3 +126,18 @@ class Person {
 
 let persona = new Person("md", "muddu", 2 - 2 - 1222);
 // console.log(persona.getName());
+
+class Customer extends Person {
+  constructor(firstName, lastName, dob, balance) {
+    super(firstName, lastName, dob);
+    this.balance = balance;
+  }
+
+  bal() {
+    return this.balance * 2;
+  }
+}
+
+let cust = new Customer("md", "muddu", 2, 333);
+
+console.log(cust.bal());
