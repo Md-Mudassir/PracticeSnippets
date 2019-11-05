@@ -100,6 +100,11 @@ const todos = [
   }
 ];
 
+const todoscopy = {
+  ...todos.filter(x => x.id !== 3)
+};
+console.log(todoscopy);
+
 let jtodo = JSON.stringify(todos);
 
 for (let to of todos) {
