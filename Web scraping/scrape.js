@@ -12,6 +12,14 @@ request("https://www.freecodecamp.org/news/", (err, res, html) => {
       .children("article")
       .next()
       .text();
-    console.log(output);
+    // console.log(output);
+
+    $(".inner").each((i, el) => {
+      const item = $(el)
+        .text()
+        .toUpperCase();
+      const link = $(el).attr("href");
+      console.log(item);
+    });
   }
 });
