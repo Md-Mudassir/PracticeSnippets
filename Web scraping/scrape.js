@@ -19,7 +19,22 @@ request("https://www.freecodecamp.org/news/", (err, res, html) => {
         .text()
         .toUpperCase();
       const link = $(el).attr("href");
-      console.log(item);
+      // console.log(item);
     });
   }
 });
+
+let options = {
+  url:
+    "https://api.github.com/repos/Md-Mudassir/SmartWatch/stats/contributors?client_id=c8ba9f97b0b64677111c&client_secret=e50f85e441448b3ffae5c6f5edf36f83e9277534",
+
+  headers: {
+    "User-Agent": "request"
+  }
+};
+
+function callback(error, response, body) {
+  let jsonBody = JSON.parse(body);
+  console.log(JSON.stringify(jsonBody, null, 2));
+}
+request(options, callback);
