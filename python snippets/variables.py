@@ -16,7 +16,9 @@ VARIABLE RULES:
 
 number = 1
 print(number*2)
-
+name='muddu'
 # multiple
 x, y = (1, 2)
-print(x-y, 'yes')
+print(x-y,name)
+
+print(type(name))
