@@ -26,7 +26,7 @@ request("https://www.freecodecamp.org/news/", (err, res, html) => {
 
 let options = {
   url:
-    "https://api.github.com/repos/Md-Mudassir/SmartWatch/stats/contributors?client_id=c8ba9f97b0b64677111c&client_secret=e50f85e441448b3ffae5c6f5edf36f83e9277534",
+    "https://api.github.com/repos/Md-Mudassir/SmartWatch/stats/code_frequency?client_id=c8ba9f97b0b64677111c&client_secret=e50f85e441448b3ffae5c6f5edf36f83e9277534",
 
   headers: {
     "User-Agent": "request"
@@ -34,7 +34,10 @@ let options = {
 };
 
 function callback(error, response, body) {
-  let jsonBody = JSON.parse(body);
   console.log(JSON.stringify(jsonBody, null, 2));
 }
 request(options, callback);
+
+fetch(
+  "https://api.github.com/repos/Md-Mudassir/SmartWatch/stats/code_frequency?client_id=c8ba9f97b0b64677111c&client_secret=e50f85e441448b3ffae5c6f5edf36f83e9277534"
+).then(res => console.log(res.json()));

@@ -16,11 +16,16 @@ score = Object.keys(count)
 // console.log(count);
 // console.log(`You Scored ${score}`);
 
-//sock merchant- hackerrank
-for (let i = 0; i <= blocks.length - 1; i++) {
-  if (blocks[i] === blocks[i + 1]) {
-    pairs++;
-    i += 1;
+// Complete the sockMerchant function below.
+function sockMerchant(n, ar) {
+  let sorted = ar.sort((a, b) => a - b);
+  let pairs = 0;
+
+  for (let i = 0; i <= sorted.length - 1; i++) {
+    if (sorted[i] === sorted[i + 1]) {
+      pairs++;
+      i += 1;
+    }
   }
+  return pairs;
 }
-console.log(pairs);
