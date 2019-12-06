@@ -32,3 +32,36 @@ console.log(c);
 //if unsure about data type use any
 let random: any = 10;
 random = "hello random";
+
+// let variable1: unknown = 10(variable1 as string).toLowerCase();
+
+//does'nt initialize type unless initialized
+let a;
+a = 11;
+
+//automatically sets the type when initialized
+let b = 33;
+
+//supports intellisense
+let multi: number | boolean; //union type
+multi = 2;
+multi = false;
+
+//no intellisense supports
+let anytyp: any; // type inference
+anytyp = 33;
+
+//? can be an optional param
+function add(num1: number, num2?: number): number {
+  return num1 + num2;
+}
+console.log(add(5, 3));
+
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+
+function name(person: Person) {
+  console.log(person.firstName);
+}

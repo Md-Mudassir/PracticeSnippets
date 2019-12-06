@@ -24,3 +24,24 @@ console.log(c);
 //if unsure about data type use any
 var random = 10;
 random = "hello random";
+// let variable1: unknown = 10(variable1 as string).toLowerCase();
+//does'nt initialize type unless initialized
+var a;
+a = 11;
+//automatically sets the type when initialized
+var b = 33;
+//supports intellisense
+var multi; //union type
+multi = 2;
+multi = false;
+//no intellisense supports
+var anytyp; // type inference
+anytyp = 33;
+//? can be an optional param
+function add(num1, num2) {
+    return num1 + num2;
+}
+console.log(add(5, 3));
+function name(person) {
+    console.log(person.firstName);
+}
