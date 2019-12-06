@@ -13,7 +13,9 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    await fetch("https://jsonplaceholder.typicode.com/users")
+    await fetch(
+      "https://cors-anywhere.herokuapp.com/https://nut-case.s3.amazonaws.com/coursessc.json"
+    )
       .then(response => response.json())
       .then(users => this.setState({ monsters: users }));
   }
@@ -24,8 +26,9 @@ class App extends Component {
   render() {
     const { monsters, searchfield } = this.state;
     const filterdMonsters = monsters.filter(monster =>
-      monster.name.toLowerCase().includes(searchfield.toLowerCase())
+      monster["Course Name"].toLowerCase().includes(searchfield.toLowerCase())
     );
+    
     return (
       <div className="App">
         <h1>Monsters</h1>
