@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, belongsTo} from '@loopback/repository';
+import {TodoList} from './todo-list.model';
 
 @model({settings: {strict: false}})
 export class Todo extends Entity {
@@ -28,6 +29,8 @@ export class Todo extends Entity {
   })
   isComplete: boolean;
 
+  @belongsTo(() => TodoList)
+  todoListId: number;
   // Define well-known properties here
 
   // Indexer property to allow additional data
